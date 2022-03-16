@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sco.css">
+    <title>Log In</title>
+</head>
+<body>
+    <div class="login-form">
+        <header class="form-header">
+            User Login
+        </header> 
+        
+
+        <div class="form-body">
+            <div class="form-fields">
+                <label class="login-fields">Username:&nbsp;</label>
+                <input class="login-fields-response" type="text" id="username">
+            </div>
+            <div class="form-fields">
+                <label class="login-fields">Password: &nbsp; </label>
+                <input type="password" class="login-fields-response" type="text" id="password">
+            </div>
+            
+            <div class="form-fields last-field">
+                <span style="color: blue;"> Create Account/Forgot?</span>
+                <button class="login-button" onclick="login()">Login</button>
+            </div>
+
+            <br>
+            <div style="font-size: small;">
+                <span >Kindly use Firefox browser</span> <br>
+                <span>Please Note: You can choose to not answer an question as well</span>
+            </div>
+        </div>
+        
+        
+    </div>
+    <script>
+        function login(){
+            sessionStorage.clear();
+            if(document.getElementById('username').value == "" || document.getElementById('password').value == ""){
+                alert("Please enter valid Username and Password")
+            }
+            else{
+                sessionStorage.clear();
+                window.location.href="math_line_q1.html";
+            }
+        }
+    </script>
+</body>
+</html>

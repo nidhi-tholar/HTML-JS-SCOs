@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sco.css">
+    <title>Question 3</title>
+</head>
+<body>
+    <div class="form">
+        <header class="form-header">Question 3</header> 
+        </header> 
+
+        <div class="form-body">
+
+                <div class="row">
+                    <div class="column">
+                        <span>As per the latest twitter news, complete the article snippet given by selecting appropriate choices for the blanks</span>
+                        <br/><br/>
+                        <span>Click on the Mark to see the options</span>
+                    </div>
+                    <div class="column">
+                        <span>
+                            "Twitter wants more cash. The company announced two <mark onclick="showMark1Options()">$_____</mark> million debt offerings in a filing today, each with a potential $100 increase provided that the sales are oversubscribed. Assuming full tip, including the $1000 million boosters <mark onclick="showMark2Options()">_____</mark> will raise up to $1.5 billion with the two offerings."</span><br/><br/>
+                            <span>Source: http://techcrunch.com/2014/09/10/twitter-to-raise-up-to-1-5b-in-debt-offering/</span>
+                    </div>
+                </div>           
+
+
+            <div class="option-fields">
+
+                <div id="mark1O">
+                    <div><input type="radio" name="q3am1" id="1">Option 1 Mark 1: $650</div>
+                    <div><input type="radio" name="q3am1" id="2">Option 2 Mark 1: $550</div>
+                    <div><input type="radio" name="q3am1" id="3">Option 3 Mark 1: $450</div>
+                </div>
+
+                <div id="mark2O">
+                    <div><input type="radio" name="q3am2" id="4">Option 1 Mark 2: Twitter</div>
+                    <div><input type="radio" name="q3am2" id="5">Option 2 Mark 2: Google</div>
+                    <div><input type="radio" name="q3am2" id="6">Option 3 Mark 2: Facebook</div>
+                </div>
+
+            </div>
+        </div>
+         
+        <footer class="form-fields last-field">
+            <button class="button" onclick="formSubmit()">Submit & Next Question</button>
+            <button class="button" onclick="formReset()">Cancel & Clear Selection</button>     
+        </footer>
+        
+    </div>
+    
+    <script>
+        let option1 = document.getElementById("mark1O");
+        let option2 = document.getElementById("mark2O");
+
+        function showMark1Options() {
+            option1.style.display = "block";
+        }
+
+        function showMark2Options() {
+            option2.style.display = "block";
+        }
+
+        function formSubmit(){
+            if(document.getElementById('1').checked && document.getElementById('4').checked){
+                sessionStorage.setItem('englishCorrect', 1);
+                sessionStorage.setItem('englishAnswered', 1);
+            }
+            else if(document.getElementById('2').checked || document.getElementById('3').checked
+                || document.getElementById('5').checked || document.getElementById('6').checked) {
+                    sessionStorage.setItem('englishCorrect', 0);
+                    sessionStorage.setItem('englishAnswered', 1);
+            }
+            else{
+                sessionStorage.setItem('englishCorrect', 0);
+                sessionStorage.setItem('englishAnswered', 0);
+            }
+            window.location.href = "video_q4.html";
+        }
+
+        function formReset(){
+            document.getElementById('6').checked=false;
+            document.getElementById('5').checked=false;
+            document.getElementById('4').checked=false;
+            document.getElementById('3').checked=false;
+            document.getElementById('2').checked=false;
+            document.getElementById('1').checked=false;
+        }
+    </script>
+</body>
+</html>

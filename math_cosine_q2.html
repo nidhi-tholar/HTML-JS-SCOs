@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sco.css">
+    <title>Question 2</title>
+</head>
+<body>
+    <div class="form">
+        <header class="form-header">Question 2</header> 
+
+        <div class="form-body">
+
+            <span>Select the cosine theorem formula</span>
+
+            <div class="form-fields">
+
+                <div class="radio-options">
+
+                    <div>
+                        <input type="radio" name="q2a" id="1">
+                        <math xmlns="http://www.w3.org/1998/Math/MathML">
+                            <mrow>
+                                <mi>cos</mi>
+                                <mo>(</mo>
+                                <mi>&alpha;</mi>
+                                <mi>&plusmn;</mi>
+                                <mo>&beta;</mo>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>cos</mi>
+                                <mi>&alpha;</mi>
+                                <mi>cos</mi>
+                                <mo>&beta;</mo>
+                                <mi>&plusmn;</mi>
+                                <mi>sin</mi>
+                                <mi>&alpha;</mi>
+                                <mi>sin</mi>
+                                <mo>&beta;</mo>
+                            </mrow>
+                        </math>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="q2a" id="2"> 
+                        <math>
+                            <mrow>
+                                <mi>sin</mi>
+                                <mo>(</mo>
+                                <mi>&alpha;</mi>
+                                <mi>&plusmn;</mi>
+                                <mo>&beta;</mo>
+                                <mo>)</mo>
+                                <mo>=</mo>
+                                <mi>sin</mi>
+                                <mi>&alpha;</mi>
+                                <mi>cos</mi>
+                                <mo>&beta;</mo>
+                                <mi>&plusmn;</mi>
+                                <mi>cos</mi>
+                                <mi>&alpha;</mi>
+                                <mi>sin</mi>
+                                <mo>&beta;</mo>
+                            </mrow>
+                        </math>
+                        </div>
+                 </div>        
+
+                <div class="radio-options">
+
+                    <div>
+                        <input type="radio" name="q2a" id="3">
+                        <math>
+                            <mrow>
+                                <mi>sin</mi>
+                                <mi>&alpha;</mi>
+                                <mo>+</mo>
+                                <mi>cos</mi>
+                                <mo>&beta;</mo>
+                                <mo>=</mo>
+                                <mi>2</mi>
+                                <mi>sin</mi>
+                                <mo>(</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>&alpha;</mi>
+                                        <mo>+</mo>
+                                        <mo>&beta;</mo>
+                                    </mrow>
+                                    <mi>2</mi>
+                                </mfrac>
+                                <mo>)</mo>
+                                <mi>cos</mi>
+                                <mo>(</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>&alpha;</mi>
+                                        <mo>-</mo>
+                                        <mo>&beta;</mo>
+                                    </mrow>
+                                    <mi>2</mi>
+                                </mfrac>
+                                <mo>)</mo>
+                            </mrow>
+                        </math>
+                    </div>
+                    
+                    <div>
+                        <input type="radio" name="q2a" id="4">
+                        <math>
+                            <mrow>
+                                <mi>sin</mi>
+                                <mi>&alpha;</mi>
+                                <mo>-</mo>
+                                <mi>cos</mi>
+                                <mo>&beta;</mo>
+                                <mo>=</mo>
+                                <mi>2</mi>
+                                <mi>cos</mi>
+                                <mo>(</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>&alpha;</mi>
+                                        <mo>+</mo>
+                                        <mo>&beta;</mo>
+                                    </mrow>
+                                    <mi>2</mi>
+                                </mfrac>
+                                <mo>)</mo>
+                                <mi>sin</mi>
+                                <mo>(</mo>
+                                <mfrac>
+                                    <mrow>
+                                        <mi>&alpha;</mi>
+                                        <mo>-</mo>
+                                        <mo>&beta;</mo>
+                                    </mrow>
+                                    <mi>2</mi>
+                                </mfrac>
+                                <mo>)</mo>
+                            </mrow>
+                        </math>
+                    </div>
+                </div>
+
+                
+            </div>
+            
+            <footer class="form-fields last-field">
+                <button class="button" onclick="formSubmit()">Submit & Next Question</button>
+                <button class="button" onclick="formReset()">Cancel & Clear Selection</button>   
+            </footer>
+
+        </div>    
+    </div>
+    <script>
+        function formSubmit(){
+            if(document.getElementById('4').checked){
+                sessionStorage.setItem('mathCorrect', parseInt(sessionStorage.getItem('mathCorrect'))+1 );
+                sessionStorage.setItem('mathAnswered', parseInt(sessionStorage.getItem('mathAnswered'))+1 );
+            }
+            else if(document.getElementById('3').checked || document.getElementById('2').checked
+                || document.getElementById('1').checked) {
+                sessionStorage.setItem('mathAnswered', parseInt(sessionStorage.getItem('mathAnswered'))+1 );
+            }
+            window.location.href = "english_q3.html";
+        }
+
+        function formReset(){
+            document.getElementById('4').checked=false;
+            document.getElementById('3').checked=false;
+            document.getElementById('2').checked=false;
+            document.getElementById('1').checked=false;
+        }
+    </script>
+</body>
+</html>

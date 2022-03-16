@@ -1,0 +1,172 @@
+.form{
+    min-width: 1000px;
+    min-height:200px;
+    border-radius: 15px;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    margin: 0;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.login-form{
+    min-width: 500px;
+    min-height:200px;
+    border-radius: 15px;
+
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+
+    margin: 0;
+    position: absolute;
+    top:50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.form-body{
+    margin: 35px;
+}
+
+.form-fields{
+    margin: 20px;
+}
+
+.login-fields{
+    text-align: left;
+}
+
+.login-fields-response{
+    margin-left: 25px;
+    width: 250px;
+}
+
+.last-field{
+    margin-top: 40px;
+    /* display: flex;
+    justify-content:space-between; */
+
+    column-count: 2;
+    column-gap: 0px;
+}
+
+.login-button{
+    border-radius: 15px;
+    padding: 0px 20px 0px 20px;
+}
+
+.button{
+    border-radius: 15px;
+    padding: 10px;
+}
+
+.form-header{
+    height: 20px;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(231, 228, 228);
+    border-radius: inherit;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.radio-options{
+    text-align: left;
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+
+}
+
+
+.row {
+    display: flex;
+  }
+  
+  .column {
+    flex: 50%;
+  }
+
+  .math-column{
+      float: left;
+  }
+
+.option-fields{
+    margin-top: 30px;
+    display: flex;
+}
+
+
+#mark1O{
+    display: none;
+    flex: 10%;
+}
+
+#mark2O{
+    display: none;
+    flex: 50%;
+}
+
+.av{
+    margin-top: 90px;
+}
+
+textarea {
+    overflow-y: scroll;
+    width: 50vw;
+    resize: none; /* Remove this if you want the user to resize the textarea */
+}
+
+.survey{
+    padding-top: 35px;
+}
+
+.surveySelect{
+    display: flex;
+    justify-content: space-between;
+}
+
+.summary-outer{
+    border: solid;
+    border-width: 2px;
+    padding: 30px;
+}
+
+.summary-body{
+    padding: 20px;
+}
+
+details{
+    padding:10px;
+}
+
+
+.finish-btn{
+    text-align: center;
+    padding: 10px;
+}
+
+.left {
+    width: 60%;
+  }
+  
+  .right {
+    width: 40%;
+  }
+
+.imageLC{
+    min-width: 10px;
+  min-height: 10px;
+  max-width: 100%;
+  max-height: 90%;
+  margin-top: 40px;
+}

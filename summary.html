@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sco.css">
+    <title>Summary</title>
+</head>
+<body>
+    <div class="form">
+        <header class="form-header">Score Card        </header> 
+
+        <div class="form-body">
+
+            <div class="summary-outer">
+
+                <details>
+                    <summary>Quantitative Section</summary>
+                    <div class="summary-body">
+                        Number of Questions Answered: <span id="mathAnswered"></span>
+                        <br/><br/>
+                        Number of Correct Answers: <span id="mathCorrect"></span>
+                    </div>
+                        
+                    
+                </details>
+
+                <details>
+                    <summary>Reading Section</summary>
+                    <div class="summary-body">
+                        Number of Questions Answered: <span id="englishAnswered"></span>
+                        <br/><br/>
+                        Number of Correct Answers: <span id="englishCorrect"></span>
+                    </div>                    
+                </details>
+
+                <details>
+                    <summary>Audio/Video Section</summary>
+                    <div class="summary-body">
+                        Number of Questions Answered: <span id="avAnswered"></span>
+                        <br/><br/>
+                        Number of Correct Answers: <span id="avCorrect"></span>
+                    </div>
+                </details>
+                
+            </div>
+        </div>
+
+        <footer class="finish-btn">
+            <span>Thank You!!!</span> <br><br>
+            <a href="login.html"><button class="button">Finish</button> </a>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById("mathAnswered").innerHTML = sessionStorage.getItem('mathAnswered');
+        document.getElementById("mathCorrect").innerHTML = sessionStorage.getItem('mathCorrect');
+
+        document.getElementById("englishCorrect").innerHTML  = sessionStorage.getItem('englishCorrect');
+        document.getElementById("englishAnswered").innerHTML  = sessionStorage.getItem('englishAnswered');
+
+        document.getElementById("avCorrect").innerHTML  = sessionStorage.getItem('avCorrect');
+        document.getElementById("avAnswered").innerHTML  = sessionStorage.getItem('avAnswered');
+
+    </script>
+</body>
+</html>

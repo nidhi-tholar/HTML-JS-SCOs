@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="sco.css">
+    <title>Survey</title>
+</head>
+<body>
+    <div class="form">
+        <header class="form-header">Survey
+        </header> 
+
+        <div class="form-body">
+            <div class="survey"> <span>How did you like the center?</span> </div>
+
+            <div class="survey">
+                <span>Comments:</span>
+                <textarea name="comments" id="comments"></textarea>
+            </div>
+
+            <div class="survey"><span>Select Text Area Location:</span></div>
+
+            <div class="surveySelect">
+                <div>
+                    <span>City</span>
+                    <input id="city" list="location">
+                    <datalist id="location">
+                        <option value="San Jose">
+                        <option value = "San Francisco">
+                        <option value = "Mountain View">
+                        <option value = "Palo Alto">
+                    </datalist>
+                </div>
+
+                <div>
+                    <span>Room Number#: </span>
+                    <input list="room" id="roomNum">
+                    <datalist id="room">
+                        <option value="Room 337">
+                        <option value="Room 210">
+                        <option value="Room 110">
+                        <option value="Room 410">
+                    </datalist>
+                    
+                </div>
+            </div>
+        </div>
+
+        <footer class="form-fields last-field">
+            <button class="button" onclick="onSubmit()">Submit & Get Score</button>
+            <a href="summary.html"> <button class="button">Skip & Get Score</button></a> 
+        </footer>
+    </div>
+    <script>
+        function onSubmit(){
+            if(document.getElementById('city').value == "" || document.getElementById('roomNum').value == ""){
+                alert("Please enter City and Room Number if you want to Submit the survey")
+            }
+            else{
+                window.location.href ="summary.html";
+            }
+        }
+    </script>
+</body>
+</html>
